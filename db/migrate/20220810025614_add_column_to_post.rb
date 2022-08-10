@@ -1,11 +1,11 @@
 class AddColumnToPost < ActiveRecord::Migration[7.0]
   def change
-    add_column :posts, :AuthorId, :integer
-    add_column :posts, :Title, :string
-    add_column :posts, :Text, :string
-    add_column :posts, :CreatedAt, :timestamp
-    add_column :posts, :UpdatedAt, :timestamp
-    add_column :posts, :CommentsCounter, :integer
-    add_column :posts, :LikesCounter, :integer
+    add_column :posts, :author_id, :integer
+    add_column :posts, :title, :string
+    add_column :posts, :text, :string
+    add_column :posts, :created_at, :timestamp
+    add_column :posts, :updated_at, :timestamp
+    add_column :posts, :comments_counter, :integer
+    add_column :posts, :likes_counter, :integer
   end
 end
