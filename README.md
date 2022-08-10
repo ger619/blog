@@ -16,7 +16,7 @@ The Blog app will be a classic example of a blog website. You will create a full
 
 ### Projects List 📋
 
-- [x] Project 1: Creating a data model.
+- [x] Project 1: Creating a data model. 
 - [x] Project 2: Validations and Model specs.
 - [x] Project 3: Processing data in models.
 - [x] Project 4: Setup and controllers.
@@ -33,7 +33,7 @@ The Blog app will be a classic example of a blog website. You will create a full
 ## Project Documentation 📄
 
 - [x] Here is the presentation video
--
+
 ## Built With 🛠️
 
 - [x] Programming Language: [Ruby](https://www.ruby-lang.org/en/)
