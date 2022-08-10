@@ -33,7 +33,7 @@ The Blog app will be a classic example of a blog website. You will create a full
 ## Project Documentation 📄
 
 - [x] Here is the presentation video
-- 
+
 ## Built With 🛠️
 
 - [x] Programming Language: [Ruby](https://www.ruby-lang.org/en/)
