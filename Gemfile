@@ -29,6 +29,11 @@ gem 'stimulus-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
+# Use ActiveStorage for image uploads and other attachments [
+group :development, :test do
+  gem 'rspec-rails'
+end
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
