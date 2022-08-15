@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'UserPosts', type: :request do
   describe 'GET /index' do
     it 'returns http success' do
-      get '/user_post/index'
+      get '/post/index'
       expect(response).to have_http_status(:success)
     end
   end
