@@ -9,4 +9,8 @@ class User < ApplicationRecord
     # 1. Get all post of this user
     posts.order(created_at: :desc).limit(3)
   end
+
+  def self.inactivated
+    # code here
+  end
 end
