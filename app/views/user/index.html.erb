@@ -1,2 +1,21 @@
-<h1>Index#user Index Page</h1>
-<p>Find me in app/views/user/index.html.erb</p>
+
+<div class="container">
+  <h1>User Details</h1>
+  <div class="row">
+    <div class="row justify-content-center user-card">
+          <% @users.each do |user| %>
+              <table>
+                <tr>
+                  <td><img src="<%= user.photo %>" width="150px" ></td>
+                  <td>
+                    <%= link_to user_path(user.id) do %>
+                      <%= user.name %>
+                    <% end %>
+                    <span>Number of posts<%= user.posts_counter %></span>
+                  </td>
+                </tr>
+              </table>
+          <% end %>
+    </div>
+  </div>
+</div>
