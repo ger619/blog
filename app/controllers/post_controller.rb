@@ -6,8 +6,7 @@ class PostController < ApplicationController
 
   def show
     @user = User.find(params[:user_id])
-    @post = Post.find(params[:id])
-    @comments = @post.comments.order(created_at: :desc)
+    @post = @user.posts.includes(:comments).find(params[:id])
     @likes = @post.likes.all
   end
 

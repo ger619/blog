@@ -28,7 +28,7 @@
   <div class="post_card post_comments">
     <% post.recent_comment.each do |comment| %>
       <div class='comment-card'>
-        <%= comment.author.name %> : <%= comment.text %>
+        <%= comment.user.name %> : <%= comment.text %>
       </div>
     <% end %>
   </div>
