@@ -5,8 +5,10 @@ class PostController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:user_id])
-    @post = Post.find(params[:id])
+    user_id = params[:user_id]
+    id = params[:id]
+    @user = User.find(params[user_id])
+    @post = Post.find(params[id])
     @comments = @post.comments.order(created_at: :desc)
     @likes = @post.likes.all
   end
