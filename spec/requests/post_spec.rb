@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
   describe 'GET /index' do
-    before(:example) { get user_post_path(1) }
+    before(:example) { get user_path('id') }
     it 'response status correct' do
       expect(response).to have_http_status(:success)
     end
