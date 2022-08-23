@@ -1,25 +1,25 @@
 require 'rails_helper'
 
-feature 'user index' do
-  background do
+RSpec.describe 'User Index Page', type: :feature do
+  before(:each) do
     @user = User.create(name: 'test', photo: 'test.jpg', bio: 'test', posts_counter: 0)
 
-    visit user_path
+    visit root_path
   end
 
-  scenario 'I can see the username of all other users' do
+  it 'I can see the username of all other users' do
     expect(page).to have_content @user.name
   end
 
-  scenario 'to show number of posts' do
+  it 'to show number of posts' do
     expect(page).to have_content @user.posts.size
   end
 
-  scenario 'to show the profile picture of users' do
+  it 'to show the profile picture of users' do
     expect(page).to have_css("img[src=\"#{@user.photo}\"]")
   end
 
-  scenario 'gets redirected to that user\'s show page' do
+  it 'gets redirected to that user\'s show page' do
     click_link @user.name
     expect(current_path).to eq user_path(@user)
   end
