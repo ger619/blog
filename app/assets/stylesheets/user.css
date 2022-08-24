@@ -96,3 +96,30 @@ button {
 .like {
   margin: 5px 20%;
 }
+
+.sign-up {
+  margin: 5px 20%;
+}
+
+.field {
+  width: 80%;
+}
+
+.input-sign {
+  width: 100%;
+  font-weight: bold;
+  border-bottom: #2e2f30 5px solid;
+  border-right: #2e2f30 5px solid;
+}
+
+.button-sign {
+  margin-top: 1rem;
+  width: 80%;
+  border-bottom: #2e2f30 5px solid;
+  border-right: #2e2f30 5px solid;
+}
+
+.button-sign:hover {
+  background-color: #f2f2f2;
+  border-bottom: #666 5px solid;
+}
