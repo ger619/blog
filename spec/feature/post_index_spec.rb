@@ -9,9 +9,9 @@ RSpec.describe 'Post show page', type: :feature do
     visit user_post_path(user, @post)
   end
 
-  # it 'User post picture' do
-  # expect(page).to have_css("img[src\"#{@post.user.photo}\"]")
-  # end
+  it 'User post picture' do
+    expect(page).to have_css("img[src=\"#{@post.user.photo}\"]")
+  end
   it 'User name' do
     expect(page).to have_content(@post.user.name)
   end

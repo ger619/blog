@@ -8,9 +8,10 @@ RSpec.describe 'User Show Page', type: :feature do
 
     visit user_path(id: user.id)
   end
-  # it 'I can see user profile picture' do
-  #  expect(page).to have_css("img[src=\"#{@post.author.photo}\"]")
-  # end
+  it 'I can see user profile picture' do
+    expect(page).to have_css("img[src=\"#{@post.user.photo}\"]")
+  end
+
   it 'I can see user\'s name' do
     expect(page).to have_content @post.user.name
   end
@@ -29,6 +30,6 @@ RSpec.describe 'User Show Page', type: :feature do
   end
   # it 'When I click to see all posts, it redirects me to the user\'s post\'s index page.' do
   #  click_link 'See all posts'
-  #  expect(current_path).to eq user_post_path(@post.user_id)
-  # end
+  #  expect(current_path).to eq user_post_path(@post.user_id, post.id)
+  #end
 end
