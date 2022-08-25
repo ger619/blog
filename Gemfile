@@ -79,3 +79,15 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
+
+group :development, :test do
+  gem 'database_cleaner'
+end
+
+gem 'bullet', group: 'development'
+
+gem 'devise', github: 'heartcombo/devise', branch: 'main'
+
+gem 'cancancan'
