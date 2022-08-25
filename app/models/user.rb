@@ -10,6 +10,12 @@ class User < ApplicationRecord
   has_many :comments, foreign_key: 'user_id', dependent: :destroy
   has_many :likes, foreign_key: 'user_id', dependent: :destroy
 
+  Roles = %i[user admin].freeze
+
+  def is?(role)
+    self.role == role.to_s
+  end
+
   def recent_post
     # Three recent post
     # 1. Get all post of this user

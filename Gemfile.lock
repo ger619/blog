@@ -296,7 +296,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   bullet
-  cancancan
+  cancancan (~> 3.4)
   capybara
   database_cleaner
   debug

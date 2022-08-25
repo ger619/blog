@@ -1,4 +1,5 @@
 class LikeController < ApplicationController
+  load_and_authorize_resource through: :current_user
   def create
     @post = Post.find(params[:post_id])
     @like = @post.likes.create(user_id: current_user.id, post_id: @post.id)

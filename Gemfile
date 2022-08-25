@@ -90,4 +90,4 @@ gem 'bullet', group: 'development'
 
 gem 'devise', github: 'heartcombo/devise', branch: 'main'
 
-gem 'cancancan'
+gem 'cancancan', '~> 3.4'

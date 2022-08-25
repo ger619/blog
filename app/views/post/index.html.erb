@@ -7,10 +7,11 @@
 <h1 class="users_heading"> List of Posts from the User</h1>
 
 <%= render partial: 'user/user_prof', locals: {user:@user} %>
+
 <button class="button d-flex justify-content-center">
   <%= link_to "Create new post", new_user_post_path(@user.id) %>
 </button>
-
+<% if can? :read, @post %>
 <% @user.posts.each do |post| %>
   <div class='post_card'>
     <div class="post-details">
@@ -32,6 +33,8 @@
       </div>
     <% end %>
   </div>
+<% end %>
+
 <% end %>
 
 

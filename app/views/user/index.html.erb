@@ -1,8 +1,10 @@
 <h1 class='users_heading'>List of all Users</h1>
   <div class='all_users'>
     <% @users.each do |user| %>
+      <% if can? :read, user %>
       <%= link_to user_path(user.id) do %>
         <%= render partial: 'user_prof', locals: {user:user} %>
       <% end %>
+        <% end %>
     <% end %>
   </div>

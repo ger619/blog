@@ -1,4 +1,6 @@
 class CommentController < ApplicationController
+  before_action :authenticate_user!
+  load_and_authorize_resource param_method: :comment_parameters
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create(text: comment_parameters[:text], user_id: current_user.id, post_id: @post.id)
@@ -19,4 +21,5 @@ class CommentController < ApplicationController
   def comment_parameters
     params.require(:comment).permit(:text)
   end
+
 end

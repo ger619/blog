@@ -1,22 +1,26 @@
 class PostController < ApplicationController
+  load_and_authorize_resource through: :current_user
   def index
     user_id = params[:user_id]
     @user = User.includes(:posts).find(user_id)
+    authorize! :read, @post
   end
 
   def show
     @user = User.find(params[:user_id])
     @post = @user.posts.includes(:comments, [:user]).find(params[:id])
     @likes = @post.likes.all
+    authorize! :read, @post
   end
 
   def new
     @post = current_user.posts.build
+    authorize! :new, @post
   end
 
   def create
     new_post = current_user.posts.build(post_params)
-
+    authorize! :create, @post
     respond_to do |format|
       format.html do
         if new_post.save
