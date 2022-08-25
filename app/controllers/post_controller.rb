@@ -11,7 +11,7 @@ class PostController < ApplicationController
   end
 
   def new
-    @current = current_user
+    @post = current_user.posts.build
   end
 
   def create
@@ -20,8 +20,9 @@ class PostController < ApplicationController
     respond_to do |format|
       format.html do
         if new_post.save
-          redirect_to user_post_path(new_post.user_id, new_post.id), notice: 'Post was successfully created.'
+          redirect_to user_path(new_post.user_id, new_post.id), notice: 'Post was successfully created.'
         else
+          puts new_post.errors.full_messages
           render :new, alert: 'Post was not created.'
         end
       end
